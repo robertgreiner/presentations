@@ -1,13 +1,10 @@
-//function getRandomNumber() {
-//	return 7;
-//}
+var Random = function() {};
 
- // function getRandomNumber() {
- // 	var sides = 6;
- // 	return Math.ceil(Math.random()*sides);
- // }
+Random.prototype.generate = function() {
+    var sides = 6;
+    return Math.ceil(Math.random()*sides);
+};
 
- //valid single roll
  //valid game roll (2 dice) = round
  //player 1 wins
  //player 2 wins

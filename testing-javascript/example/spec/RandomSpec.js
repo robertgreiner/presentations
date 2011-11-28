@@ -1,15 +1,11 @@
-describe("Rolling a single die", function() {
-  describe("a fair six-sided die", function() {
-    it("should not have a value greater than six", function() {
-      expect(getRandomNumber() <= 6).toEqual(true);
+describe("A fair six-side die", function() {
+  describe("a valid roll", function() {
+    it("should have a maximum value of six", function() {
+      expect(new Random().generate()).toBeLessThan(7);
+    });
+    it("should have a minimum value of one", function() {
+      expect(new Random().generate()).toBeGreaterThan(0);
     });
   });
 });
 
-describe("Rolling a pair of dice", function() {
-  describe("a winning roll", function() {
-    it("should have a total value of 7", function() {
-      expect(isWinner()).toEqual(true);
-    });
-  });
-});
